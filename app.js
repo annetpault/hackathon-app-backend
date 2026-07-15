@@ -35,7 +35,7 @@ const Team=mongoose.model("Teams",new mongoose.Schema(
     }
 ))
 
-app.get("/view-team",async(req,res)=> {
+app.post("/view-team",async(req,res)=> {
     const teams=await Team.find()
     res.json(teams);
 });
